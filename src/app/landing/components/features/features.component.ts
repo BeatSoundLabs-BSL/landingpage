@@ -1,8 +1,18 @@
 import { Component } from '@angular/core';
+import {MatGridList, MatGridTile} from '@angular/material/grid-list';
+import {MatCard, MatCardContent, MatCardTitle} from '@angular/material/card';
+import {NgForOf} from '@angular/common';
 
 @Component({
   selector: 'app-features',
-  imports: [],
+  imports: [
+    MatGridList,
+    MatGridTile,
+    MatCard,
+    MatCardTitle,
+    MatCardContent,
+    NgForOf
+  ],
   templateUrl: './features.component.html',
   styleUrl: './features.component.css'
 })
