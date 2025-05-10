@@ -1,15 +1,15 @@
-<section class="bg-gray-200 py-8 px-4">
+<section class="contact">
   <h2 i18n>Contáctanos</h2>
-  <form class="max-w-md mx-auto" #form="ngForm">
-    <mat-form-field appearance="fill" class="w-full">
+  <form class="contact-form" #form="ngForm">
+    <mat-form-field appearance="fill" class="form-field">
       <mat-label i18n>Nombre</mat-label>
       <input matInput name="nombre" ngModel required>
     </mat-form-field>
-    <mat-form-field appearance="fill" class="w-full">
+    <mat-form-field appearance="fill" class="form-field">
       <mat-label i18n>Apellidos</mat-label>
       <input matInput name="apellido" ngModel required>
     </mat-form-field>
-    <mat-form-field appearance="fill" class="w-full">
+    <mat-form-field appearance="fill" class="form-field">
       <mat-label i18n>Correo electrónico</mat-label>
       <input matInput type="email" name="correo" ngModel required>
     </mat-form-field>
@@ -18,7 +18,7 @@
       <mat-radio-button value="gestor" i18n>Gestor</mat-radio-button>
       <mat-radio-button value="musico" i18n>Músico</mat-radio-button>
     </mat-radio-group>
-    <mat-form-field appearance="fill" class="w-full">
+    <mat-form-field appearance="fill" class="form-field">
       <mat-label i18n>Consulta</mat-label>
       <textarea matInput name="consulta" ngModel></textarea>
     </mat-form-field>
