@@ -1,0 +1,42 @@
+<mat-toolbar color="secondary">
+  <div class="toolbar-container">
+    <!-- Logo -->
+    <a routerLink="/" class="logo">
+      <img src="/SoundNestLogo.png" alt="SoundNest Logo" height="40">
+    </a>
+
+    <!-- Menú para desktop -->
+    <nav class="desktop-menu">
+      <a *ngFor="let item of menuItems"
+         [routerLink]="item.path"
+         mat-button>
+        {{ item.name }}
+      </a>
+
+    </nav>
+    <nav class="accountButtons">
+      <a routerLink="/login" mat-raised-button>
+        Log in
+      </a>
+      <a routerLink="/sign-in" mat-raised-button>
+        Sign in
+      </a>
+    </nav>
+    <!-- Menú para móvil -->
+    <button mat-icon-button [matMenuTriggerFor]="mobileMenu" class="mobile-menu-button">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #mobileMenu="matMenu">
+      <a *ngFor="let item of menuItems"
+         [routerLink]="item.path"
+         mat-menu-item>
+        {{ item.name }}
+      </a>
+      <mat-divider></mat-divider>
+      <a routerLink="/login" mat-menu-item>
+        <mat-icon>login</mat-icon>
+        <span>Iniciar sesión</span>
+      </a>
+    </mat-menu>
+  </div>
+</mat-toolbar>

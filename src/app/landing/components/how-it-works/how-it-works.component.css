@@ -1,21 +1,31 @@
+section{
+  display: flex;
+}
+
 .how-it-works {
-  padding: 4rem 1rem;
+  background-color: white;
+  text-align: left;
+  min-height: 80vh;
+}
 
-  h2 {
-    font-size: 1.75rem;
-    margin-bottom: 1rem;
-  }
+.how-it-works h2 {
+  margin-top: 3rem;
+  font-size: 3rem;
+}
 
-  p {
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-  }
+.how-it-works p {
+  max-width: 800px;
+  margin: 3rem auto 2rem;
+}
 
-  ul {
-    list-style-type: disc;
-    padding-left: 1.5rem;
-    li {
-      margin-bottom: 0.5rem;
-    }
-  }
+.how-it-works ul {
+  padding: 0;
+  max-width: 800px;
+}
+
+.how-it-works li {
+  color: black;
+  padding: 1.5rem;
+  min-width: 200px;
+
 }

@@ -1,29 +1,31 @@
-.features-section {
-  background-color: #f3f4f6; // gray-100
-padding: 3rem 1.5rem;
+.bg-gray-100 {
+  background-color: var(--light-bg);
+}
+
+mat-grid-list {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+mat-card {
+  height: 100%;
+  padding: 2rem;
   text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1) !important;
+  transition: transform 0.3s ease;
+}
 
-  h2 {
-    font-size: 1.75rem;
-    font-weight: 700;
-    margin-bottom: 2rem;
-  }
+mat-card:hover {
+  transform: translateY(-5px);
+}
 
-  .feature-card {
-    padding: 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 0.5rem;
+mat-card-title {
+  font-size: 1.5rem !important;
+  margin-bottom: 1rem !important;
+  color: var(--primary-color);
+}
 
-    mat-card-title {
-      font-size: 1rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-    }
-
-    mat-card-content {
-      font-size: 0.875rem;
-      color: #4b5563; // gray-600
-    }
-  }
+mat-card-content {
+  color: var(--text-color);
 }
 

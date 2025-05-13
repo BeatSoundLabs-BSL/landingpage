@@ -5,10 +5,11 @@ import {HowItWorksComponent} from './landing/components/how-it-works/how-it-work
 import {FeaturesComponent} from './landing/components/features/features.component';
 import {CallToActionComponent} from './landing/components/call-to-action/call-to-action.component';
 import {ContactComponent} from './landing/components/contact/contact.component';
+import {NavbarComponent} from './shared/components/navbar/navbar.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeroComponent, HowItWorksComponent, FeaturesComponent, CallToActionComponent, ContactComponent],
+  imports: [RouterOutlet, HeroComponent, HowItWorksComponent, FeaturesComponent, CallToActionComponent, ContactComponent, NavbarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

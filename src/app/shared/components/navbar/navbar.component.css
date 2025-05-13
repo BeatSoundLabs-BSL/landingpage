@@ -1,0 +1,57 @@
+.toolbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.desktop-menu {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin-left: 7rem;
+}
+
+mat-toolbar {
+  background-color: #d6d7d8 !important;
+  color: black !important;
+}
+
+.desktop-menu a {
+  color: black !important;
+}
+
+.mobile-menu-button {
+  color: var(--text-on-primary) !important;
+  display: none;
+}
+
+.mat-raised-button {
+  background-color: var(--accent-color) !important;
+  color: var(--text-on-accent) !important;
+}
+
+.accountButtons{
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .desktop-menu {
+    display: none;
+  }
+
+  .mobile-menu-button {
+    display: block;
+  }
+}
+
