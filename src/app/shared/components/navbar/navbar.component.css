@@ -4,7 +4,7 @@
   align-items: center;
   width: 100%;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 10rem;
 }
 
 .logo {
@@ -16,17 +16,21 @@
 .desktop-menu {
   display: flex;
   align-items: center;
-  gap: 3rem;
+  gap: 2rem;
   margin-left: 7rem;
+  font-size: 13px;
 }
 
 mat-toolbar {
-  background-color: #d6d7d8 !important;
-  color: black !important;
+  height: 75px;
+  background-color: #D7D8DA !important;
+  color: #0C0C09 !important;
+  filter: drop-shadow(0 0 8px gray);
+
 }
 
 .desktop-menu a {
-  color: black !important;
+  color: #0C0C09 !important;
 }
 
 .mobile-menu-button {

@@ -1,5 +1,4 @@
 .hero {
-  background: url("/public/preview.jpg") no-repeat center center / cover;
   color: white;
   text-align: center;
   padding: 6rem 2rem;
@@ -10,11 +9,16 @@
   min-height: 80vh;
 }
 
+.hero-body{
+
+}
+
 .hero h1 {
   font-size: 3rem;
   max-width: 800px;
   margin-bottom: 1.5rem;
   line-height: 3.5rem;
+
 }
 
 .hero p {
@@ -22,12 +26,16 @@
   max-width: 700px;
   margin-bottom: 3rem;
   line-height: 2rem;
+  margin-left:45px;
 }
 
 .hero-buttons {
   display: flex;
   gap: 1.5rem;
   margin-top: 2rem;
+  margin-left: 11rem;
+  align-items: center;
+
 }
 
 .hero-buttons button {
