@@ -1,6 +1,5 @@
 .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-  url('/assets/images/studio-bg.jpg') center/cover no-repeat;
+  background: url("/public/preview.jpg") no-repeat center center / cover;
   color: white;
   text-align: center;
   padding: 6rem 2rem;
