@@ -3,50 +3,110 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 10rem;
+  padding: 0 2rem;
 }
 
 .logo {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  transition: transform var(--transition-speed) ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.logo img {
+  height: 50px;
+  border-radius: 0;
 }
 
 .desktop-menu {
   display: flex;
   align-items: center;
   gap: 2rem;
-  margin-left: 7rem;
-  font-size: 13px;
+  margin-left: auto;
+  margin-right: 2rem;
 }
 
 mat-toolbar {
-  height: 75px;
-  background-color: #D7D8DA !important;
-  color: #0C0C09 !important;
-  filter: drop-shadow(0 0 8px gray);
-
+  height: 70px;
+  background-color: #FFFFFF !important;
+  color: var(--text-primary) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .desktop-menu a {
-  color: #0C0C09 !important;
+  color: var(--text-primary) !important;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.desktop-menu a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--accent-color);
+  transition: width var(--transition-speed) ease;
+}
+
+.desktop-menu a:hover::after {
+  width: 100%;
 }
 
 .mobile-menu-button {
-  color: var(--text-on-primary) !important;
   display: none;
+  color: var(--primary-color) !important;
 }
 
-.mat-raised-button {
+.accountButtons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.accountButtons a {
+  font-weight: 500;
+  transition: all var(--transition-speed) ease;
+}
+
+.accountButtons a:first-child {
+  background-color: transparent !important;
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color) !important;
+}
+
+.accountButtons a:last-child {
   background-color: var(--accent-color) !important;
   color: var(--text-on-accent) !important;
 }
 
-.accountButtons{
-  display: flex;
-  justify-content: flex-end;
-  gap: 1rem;
+.accountButtons a:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 992px) {
+  .toolbar-container {
+    padding: 0 1rem;
+  }
+
+  .desktop-menu {
+    gap: 1rem;
+    margin-right: 1rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -56,6 +116,11 @@ mat-toolbar {
 
   .mobile-menu-button {
     display: block;
+    margin-left: auto;
+    margin-right: 1rem;
+  }
+
+  .accountButtons a:first-child {
+    display: none;
   }
 }
-

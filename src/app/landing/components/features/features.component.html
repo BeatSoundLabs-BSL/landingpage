@@ -1,11 +1,11 @@
-<section class="bg-gray-100 py-8 px-4 text-center">
-  <h2 i18n>Características principales</h2>
-  <mat-grid-list cols="2" rowHeight="fit" gutterSize="16px">
-    <mat-grid-tile *ngFor="let feature of features">
-      <mat-card>
-        <mat-card-title i18n>{{ feature.title }}</mat-card-title>
-        <mat-card-content i18n>{{ feature.desc }}</mat-card-content>
-      </mat-card>
-    </mat-grid-tile>
-  </mat-grid-list>
+<section class="features-section">
+  <div class="features-wrapper">
+    <h2 i18n>Características principales</h2>
+    <div class="features-grid">
+      <div class="feature-card fade-in" *ngFor="let feature of features">
+        <h3 class="feature-title" i18n>{{ feature.title }}</h3>
+        <p class="feature-description" i18n>{{ feature.desc }}</p>
+      </div>
+    </div>
+  </div>
 </section>

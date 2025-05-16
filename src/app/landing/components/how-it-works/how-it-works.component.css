@@ -1,31 +1,130 @@
-section{
+.how-it-works-section {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  background-color: white;
+  padding: var(--section-padding);
+  min-height: 70vh;
 }
 
 .how-it-works {
-  background-color: white;
+  flex: 1;
   text-align: left;
-  min-height: 80vh;
 }
 
 .how-it-works h2 {
-  margin-top: 3rem;
-  font-size: 3rem;
+  text-align: left;
+  margin-top: 0;
+  font-size: 2.5rem;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.how-it-works h2::after {
+  left: 0;
+  transform: none;
 }
 
 .how-it-works p {
-  max-width: 800px;
-  margin: 3rem auto 2rem;
+  max-width: 600px;
+  margin: 0 0 2.5rem 0;
+  font-size: 1.2rem;
+  color: var(--text-secondary);
 }
 
-.how-it-works ul {
+.benefits-list {
   padding: 0;
-  max-width: 800px;
+  list-style: none;
 }
 
-.how-it-works li {
-  color: black;
-  padding: 1.5rem;
-  min-width: 200px;
+.benefits-list li {
+  position: relative;
+  padding: 1rem 0 1rem 3rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
 
+.benefits-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background-color: var(--accent-color);
+  color: white;
+  border-radius: 50%;
+  font-size: 0.9rem;
+}
+
+.how-it-works-image {
+  flex: 1;
+  max-width: 450px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  transition: transform var(--transition-speed) ease;
+}
+
+.how-it-works-image:hover {
+  transform: translateY(-5px);
+}
+
+@media (max-width: 992px) {
+  .how-it-works-section {
+    flex-direction: column-reverse;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  .how-it-works h2 {
+    text-align: center;
+  }
+
+  .how-it-works h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .how-it-works p {
+    margin: 0 auto 2.5rem;
+    text-align: center;
+  }
+
+  .benefits-list {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .how-it-works-image {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .how-it-works-section {
+    padding: 4rem 1.5rem;
+  }
+
+  .how-it-works h2 {
+    font-size: 2rem;
+  }
+
+  .how-it-works p {
+    font-size: 1.1rem;
+  }
+
+  .benefits-list li {
+    font-size: 1rem;
+  }
+
+  .how-it-works-image {
+    max-width: 280px;
+  }
 }

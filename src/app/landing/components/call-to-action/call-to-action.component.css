@@ -1,23 +1,78 @@
 .call-to-action {
-  background-color: var(--primary-color);
-  color: var(--text-on-primary);
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  color: white;
   text-align: center;
-  padding: 4rem 2rem;
+  padding: 6rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.call-to-action::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('/assets/pattern.svg');
+  opacity: 0.1;
+}
+
+.cta-content {
+  position: relative;
+  z-index: 2;
+  max-width: var(--max-width);
+  margin: 0 auto;
 }
 
 .call-to-action h2 {
   color: white;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+}
+
+.call-to-action h2::after {
+  background-color: white;
 }
 
 .call-to-action p {
   max-width: 600px;
-  margin: 0 auto 2rem;
-  font-size: 1.2rem;
+  margin: 0 auto 2.5rem;
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .call-to-action button {
-  background-color: var(--accent-color);
-  color: var(--text-on-accent);
-  font-weight: 500;
+  background-color: var(--accent-color) !important;
+  color: white !important;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 1rem 3rem;
+  border-radius: var(--border-radius);
+  transition: all var(--transition-speed) ease;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.call-to-action button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.25);
+}
+
+@media (max-width: 768px) {
+  .call-to-action {
+    padding: 4rem 1.5rem;
+  }
+
+  .call-to-action h2 {
+    font-size: 2rem;
+  }
+
+  .call-to-action p {
+    font-size: 1.1rem;
+  }
+
+  .call-to-action button {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+  }
 }

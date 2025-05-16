@@ -1,6 +1,11 @@
 .contact {
   background-color: white;
-  padding: 4rem 2rem;
+  padding: 6rem 2rem;
+}
+
+.contact-wrapper {
+  max-width: var(--max-width);
+  margin: 0 auto;
 }
 
 .contact-form {
@@ -9,6 +14,10 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  padding: 2rem;
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
 }
 
 .form-field {
@@ -18,7 +27,7 @@
 mat-radio-group {
   display: flex;
   gap: 1rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 mat-radio-button {
@@ -27,9 +36,46 @@ mat-radio-button {
 
 button[type="submit"] {
   align-self: center;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
+  background-color: var(--accent-color) !important;
+  color: white !important;
+  font-weight: 500;
+  padding: 0.8rem 3rem;
+  transition: all var(--transition-speed) ease;
+}
+
+button[type="submit"]:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.mat-form-field-wrapper {
+  margin-bottom: 0;
+}
+
+.account-type-label {
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  display: block;
 }
 
 textarea {
   min-height: 120px;
+  resize: vertical;
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 4rem 1.5rem;
+  }
+
+  .contact-form {
+    padding: 1.5rem;
+  }
+
+  mat-radio-group {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }
