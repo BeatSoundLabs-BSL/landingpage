@@ -69,24 +69,28 @@
   margin-top: 2rem;
 }
 
-.hero-buttons button {
+.hero-buttons a {
   min-width: 200px;
   font-weight: 600;
   transition: all var(--transition-speed) ease-in-out;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.hero-buttons button:first-child {
+.hero-buttons a:first-child {
   background-color: var(--accent-color) !important;
   color: white !important;
 }
 
-.hero-buttons button:last-child {
+.hero-buttons a:last-child {
   background-color: transparent !important;
   color: white !important;
   border: 2px solid white;
 }
 
-.hero-buttons button:hover {
+.hero-buttons a:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
@@ -129,7 +133,7 @@
     margin: 0 auto;
   }
 
-  .hero-buttons button {
+  .hero-buttons a {
     width: 100%;
   }
 }

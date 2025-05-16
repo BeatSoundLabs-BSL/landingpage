@@ -34,7 +34,7 @@
 
 mat-toolbar {
   height: 70px;
-  background-color: #FFFFFF !important;
+  background-color: #D4D7D6 !important;
   color: var(--text-primary) !important;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
   position: sticky;

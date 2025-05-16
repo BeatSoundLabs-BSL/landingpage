@@ -8,7 +8,7 @@
     <!-- Menú para desktop -->
     <nav class="desktop-menu">
       <a *ngFor="let item of menuItems"
-         [routerLink]="item.path"
+         (click)="scrollToSection(item.path)"
          mat-button>
         {{ item.name }}
       </a>
@@ -30,7 +30,7 @@
     </button>
     <mat-menu #mobileMenu="matMenu">
       <a *ngFor="let item of menuItems"
-         [routerLink]="item.path"
+         (click)="scrollToSection(item.path)"
          mat-menu-item>
         {{ item.name }}
       </a>

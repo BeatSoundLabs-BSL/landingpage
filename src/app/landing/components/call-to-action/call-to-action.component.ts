@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import {MatButton} from '@angular/material/button';
+import {MatAnchor, MatButton} from '@angular/material/button';
 
 @Component({
   selector: 'app-call-to-action',
   imports: [
-    MatButton
+    MatButton,
+    MatAnchor
   ],
   templateUrl: './call-to-action.component.html',
   styleUrl: './call-to-action.component.css'

@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import {MatButton} from '@angular/material/button';
+import {MatAnchor, MatButton} from '@angular/material/button';
 
 @Component({
   selector: 'app-hero',
   imports: [
-    MatButton
+    MatButton,
+    MatAnchor
   ],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.css'

@@ -30,4 +30,13 @@ export class NavbarComponent {
     { name: 'Características', path: '#features' },
     { name: 'Contacto', path: '#contact' }
   ];
+
+  scrollToSection(sectionId: string): void {
+    if (sectionId.startsWith('#')) {
+      const element = document.querySelector(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }
 }
